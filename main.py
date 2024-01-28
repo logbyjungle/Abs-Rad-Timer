@@ -1,10 +1,11 @@
 import pyautogui
 import time
+start = time.time()
 while True:
     if pyautogui.locateOnScreen('start.png',confidence = 0.7):
+        if time.time()-start > 5:
+            print("timer started")
         start = time.time()
-        print("timer started")
-        time.sleep(5)
     if pyautogui.locateOnScreen('end.png', confidence = 0.7):
         end = int(abs(start - time.time())-10)
         with open("times.txt", "a") as file:
