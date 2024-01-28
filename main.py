@@ -4,6 +4,7 @@ while True:
     if pyautogui.locateOnScreen('start.png',confidence = 0.7):
         start = time.time()
         print("timer started")
+        time.sleep(5)
     if pyautogui.locateOnScreen('end.png', confidence = 0.7):
         end = int(abs(start - time.time())-10)
         if start!=0:
