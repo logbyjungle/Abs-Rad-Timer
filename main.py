@@ -8,7 +8,11 @@ while True:
         start = time.time()
     if pyautogui.locateOnScreen('end.png', confidence = 0.7):
         end = int(abs(start - time.time())-10)
+        if end - (int(end/60))*60 >= 10:
+            seconds = str(end - (int(end/60))*60)
+        else:
+            seconds = "0" + str(end - (int(end/60))*60)
         with open("times.txt", "a") as file:
-            file.write(str(int(end/60)) + ":" + str(end - (int(end/60))*60) + "\n")
+            file.write(str(int(end/60)) + ":" + seconds + "\n")
         print("gg, the time is: " + str(int(end / 60)) + ":" + str(end - (int(end / 60)) * 60))
         time.sleep(5)
