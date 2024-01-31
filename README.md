@@ -9,4 +9,4 @@ livesplit, the official speedrunning timer does not work for absolute radiance a
 
 the time it took to get the kill is printed but most importantly stoped in the file "times.txt" to keep track of the progression
 
-pyautogui and time libraries are required for it to work
+python , pyautogui library and time library are required for it to work
